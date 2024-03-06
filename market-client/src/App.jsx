@@ -4,6 +4,9 @@ import Dashboard from "./pages/user/Dashboard.jsx";
 import PrivateRoute from "./components/routes/PrivateRoute.jsx";
 import AdminRoute from "./components/routes/AdminRoute.jsx";
 import AdminDashboard from "./pages/admin/AdminDashboard.jsx";
+import {CreateCategory} from "./pages/admin/CreateCategory.jsx";
+import {CreateProduct} from "./pages/admin/CreateProduct.jsx";
+import {ShowUsers} from "./pages/admin/ShowUsers.jsx";
 
 
 export default function App() {
@@ -15,6 +18,9 @@ export default function App() {
       </Route>
       <Route path={"/dashboard"} element={<AdminRoute/>}>
         <Route path={"admin"} element={<AdminDashboard/>}/>
+        <Route path={"admin/create-category"} element={<CreateCategory/>}/>
+        <Route path={"admin/create-product"} element={<CreateProduct/>}/>
+        <Route path={"admin/users"} element={<ShowUsers/>}/>
       </Route>
       <Route path="/about" element={<About/>}/>
       <Route path="/contact" element={<Contact/>}/>

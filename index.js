@@ -5,10 +5,10 @@ import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoute.js";
 import cors from "cors";
 
-//configure env 
+//configure env
 dotenv.config();
 
-//database config 
+//database config
 connectDB();
 
 const PORT = process.env.PORT || 8080;
@@ -17,22 +17,20 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 //middlewares
-app.use(cors())
-app.use(express.json())
-app.use(morgan('dev'))
+app.use(cors());
+app.use(express.json());
+app.use(morgan("dev"));
 
-//routes 
-app.use('/api/v1/auth', authRoutes);
+//routes
+app.use("/api/v1/auth", authRoutes);
 
 //rest api
 app.get("/", (req, res) => {
   res.send({
-    message: "market.js"
-  })
-})
-
-app.listen(PORT, () => {
-  console.log(`Server running on ${PORT}`)
+    message: "market.js",
+  });
 });
 
-
+app.listen(PORT, () => {
+  console.log(`Server running on ${PORT}`);
+});
