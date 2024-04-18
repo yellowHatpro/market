@@ -12,7 +12,7 @@ export const Header = () => {
         toast.success("Logout successfully")
     }
     return (
-  <div className={"flex flex-row bg-red-200 justify-between p-4 text-xl"}>
+  <div className={"flex flex-row bg-[#181825] justify-between p-4 text-xl"}>
   <div className={"font-bold"}>
    market.
   </div>

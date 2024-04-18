@@ -3,7 +3,7 @@ import { Header } from "./Header";
 import {Helmet} from "react-helmet";
 import {Toaster} from "react-hot-toast";
 export const Layout = ({children, title, description, keywords, author }) => (
-  <div className={"flex flex-col"}>
+  <>
       <Helmet>
           <meta charSet={"utf-8"}/>
           <meta name= "description" content={description}/>
@@ -11,13 +11,13 @@ export const Layout = ({children, title, description, keywords, author }) => (
           <meta name= "author" content={author}/>
           <title>{title}</title>
       </Helmet>
-    <Header />
-    <main className={"min-h-[90vh]"}>
+    <Header/>
+    <main className={"h-screen bg-[#1e1e2e]"}>
         <Toaster/>
         {children}
     </main>
-    <Footer />
-  </div>
+    <Footer/>
+  </>
 )
 
 Layout.defaultProps = {

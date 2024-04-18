@@ -42,26 +42,31 @@ const Login = () => {
                     <h1 className={"text-2xl p-4"}>LOGIN PAGE</h1>
                     <form
                         onSubmit={handleSubmit}
-                        className={"child:p-4 flex flex-col child:border-2 child:m-2 child:rounded-xl"}>
-                        <input type={"email"}
-                               id={"email"}
-                               value={email}
-                               onChange={(e) => setEmail(e.target.value)}
-                               placeholder={"Enter your email"}
-                               required={true}/>
-                        <input type={"password"}
-                               id={"password"}
-                               value={password}
-                               onChange={(e) => setPassword(e.target.value)}
-                               placeholder={"Enter your password"}
-                               required={true}/>
-                        <button className={"bg-blue-600 border-0 max-w-fit"}>Submit</button>
-                        <button className={"bg-blue-600 border-0 max-w-fit"}
-                                onClick={()=>{navigate("/forgot-password")}}>Forgot Password?</button>
+                        className={"flex flex-col"}>
+                        <div className={"child:p-2 flex flex-col child:my-2 child:rounded-md child:bg-[#11111b]"}>
+                            <input type={"email"}
+                                   id={"email"}
+                                   value={email}
+                                   onChange={(e) => setEmail(e.target.value)}
+                                   placeholder={"Enter your email"}
+                                   required={true}/>
+                            <input type={"password"}
+                                   id={"password"}
+                                   value={password}
+                                   onChange={(e) => setPassword(e.target.value)}
+                                   placeholder={"Enter your password"}
+                                   required={true}/>
+                        </div>
+                        <button className={"bg-[#181825] p-2 rounded-md border-0 max-w-fit my-2"}>Submit</button>
+                        <button className={"bg-[#181825] p-2 rounded-md border-0 max-w-fit my-2"}
+                                onClick={() => {
+                                    navigate("/forgot-password")
+                                }}>Forgot Password?
+                        </button>
                     </form>
                 </div>
             </Layout>
-        </>
+    </>
 }
 
 export default Login

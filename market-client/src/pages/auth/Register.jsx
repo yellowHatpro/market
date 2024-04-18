@@ -35,44 +35,46 @@ const Register = () => {
                     <h1 className={"text-2xl p-4"}>REGISTER PAGE</h1>
                     <form
                         onSubmit={handleSubmit}
-                        className={"child:p-4 flex flex-col child:border-2 child:m-2 child:rounded-xl"}>
-                        <input type={"text"}
-                               id={"name"}
-                               value={name}
-                               onChange={(e) => setName(e.target.value)}
-                               placeholder={"Enter your name"}
-                               required={true}/>
-                        <input type={"tel"}
-                               id={"phone"}
-                               value={phone}
-                               onChange={(e) => setPhone(e.target.value)}
-                               placeholder={"Enter your phone number"}
-                               required={true}/>
-                        <input type={"text"}
-                               id={"address"}
-                               value={address}
-                               onChange={(e) => setAddress(e.target.value)}
-                               placeholder={"Enter your address"}
-                               required={true}/>
-                        <input type={"email"}
-                               id={"email"}
-                               value={email}
-                               onChange={(e) => setEmail(e.target.value)}
-                               placeholder={"Enter your email"}
-                               required={true}/>
-                        <input type={"password"}
-                               id={"password"}
-                               value={password}
-                               onChange={(e) => setPassword(e.target.value)}
-                               placeholder={"Enter your password"}
-                               required={true}/>
-                        <input type={"text"}
-                               id={"answer"}
-                               value={answer}
-                               onChange={(e) => setAnswer(e.target.value)}
-                               placeholder={"Which is your favorite sport?"}
-                               required={true}/>
-                        <button className={"bg-blue-600 border-0 max-w-fit"}>Submit</button>
+                        className={"flex flex-col items-center"}>
+                        <div className={"child:p-2 flex flex-col child:m-2 child:rounded-md child:bg-[#11111b]"}>
+                            <input type={"text"}
+                                   id={"name"}
+                                   value={name}
+                                   onChange={(e) => setName(e.target.value)}
+                                   placeholder={"Enter your name"}
+                                   required={true}/>
+                            <input type={"tel"}
+                                   id={"phone"}
+                                   value={phone}
+                                   onChange={(e) => setPhone(e.target.value)}
+                                   placeholder={"Enter your phone number"}
+                                   required={true}/>
+                            <input type={"text"}
+                                   id={"address"}
+                                   value={address}
+                                   onChange={(e) => setAddress(e.target.value)}
+                                   placeholder={"Enter your address"}
+                                   required={true}/>
+                            <input type={"email"}
+                                   id={"email"}
+                                   value={email}
+                                   onChange={(e) => setEmail(e.target.value)}
+                                   placeholder={"Enter your email"}
+                                   required={true}/>
+                            <input type={"password"}
+                                   id={"password"}
+                                   value={password}
+                                   onChange={(e) => setPassword(e.target.value)}
+                                   placeholder={"Enter your password"}
+                                   required={true}/>
+                            <input type={"text"}
+                                   id={"answer"}
+                                   value={answer}
+                                   onChange={(e) => setAnswer(e.target.value)}
+                                   placeholder={"Which is your favorite sport?"}
+                                   required={true}/>
+                        </div>
+                        <button className={"bg-[#181825] p-2 rounded-md border-0 max-w-fit"}>Submit</button>
                     </form>
                 </div>
             </Layout>
